@@ -2,7 +2,10 @@
 
 import logging
 import os
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 def get_logger(name: str):
     level = os.getenv("LOG_LEVEL", "INFO").upper()
