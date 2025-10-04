@@ -1,0 +1,14 @@
+
+
+# Treat common binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+
+# Keep text diagrams as text (Mermaid, PlantUML)
+*.mmd text
+*.puml text
+
+# Normalize line endings
+* text=auto eol=lf

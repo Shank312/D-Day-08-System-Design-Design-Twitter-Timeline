@@ -1,0 +1,12 @@
+
+
+{
+  "type": "record",
+  "name": "FanoutEvent",
+  "namespace": "timeline.events",
+  "fields": [
+    {"name": "tweet_id", "type": "string"},
+    {"name": "target_user_id", "type": "string"},
+    {"name": "mode", "type": {"type": "enum", "name": "Mode", "symbols": ["WRITE", "READ"]}}
+  ]
+}

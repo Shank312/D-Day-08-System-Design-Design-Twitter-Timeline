@@ -1,0 +1,19 @@
+
+
+sequenceDiagram
+  participant Client
+  participant Gateway
+  participant TweetWrite
+  participant Kafka
+  participant Fanout
+  participant HTL as HTL Store
+
+  Client->>Gateway: POST /tweets
+  Gateway->>TweetWrite: validate + auth + payload
+  TweetWrite->>TweetWrite: assign snowflake id
+  TweetWrite->>TweetWrite: persist to Cassandra
+  TweetWrite-->>Gateway: 201 Created {id}
+  TweetWrite->>Kafka: publish tweet_created
+  Kafka-->>Fanout: consume tweet_created
+  Fanout->>HTL: push to follower HTLs (or mark celeb)
+

@@ -1,0 +1,13 @@
+
+
+{
+  "type": "record",
+  "name": "TweetCreated",
+  "namespace": "timeline.events",
+  "fields": [
+    {"name": "tweet_id", "type": "string"},
+    {"name": "author_id", "type": "string"},
+    {"name": "text", "type": "string"},
+    {"name": "created_at", "type": "string"}
+  ]
+}

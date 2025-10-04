@@ -1,0 +1,13 @@
+
+
+{
+  "type": "record",
+  "name": "LikeEvent",
+  "namespace": "timeline.events",
+  "fields": [
+    {"name": "tweet_id", "type": "string"},
+    {"name": "user_id", "type": "string"},
+    {"name": "liked", "type": "boolean"},
+    {"name": "ts", "type": "string"}
+  ]
+}

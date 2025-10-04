@@ -1,0 +1,10 @@
+
+
+# This file tells GitHub who owns which parts of the codebase.
+# When someone opens a PR that modifies these paths,
+# GitHub will request a review from the owners.
+
+*        @Shank312
+/docs/   @Shank312
+/services/ @Shank312
+/deploy/ @Shank312
